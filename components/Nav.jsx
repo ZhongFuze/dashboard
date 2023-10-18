@@ -25,7 +25,7 @@ const Nav = () => {
     <nav className="flex-between w-full mb-16 pt-3">
       <Link href="/" className="flex gap-2 flex-center">
         <Image
-          src="/assets/images/logo.svg"
+          src="/assets/images/orange.svg"
           alt="Dashboard Logo"
           width={30}
           height={30}
@@ -41,6 +41,10 @@ const Nav = () => {
       <div className="sm:flex hidden">
         {session?.user ? (
           <div className='flex gap-3 md:gap-5'>
+            <Link href="/new-widget"
+            className='black_btn'>
+              New Widget
+            </Link>
             <Link href="/create-widget"
             className='black_btn'>
               Create Widget
@@ -97,7 +101,7 @@ const Nav = () => {
                   className='dropdown_link'
                   onClick={() => setToggleDropdown(false)}
                 >
-                  My Profile
+                  My Dashboard
                 </Link>
 
                 <Link
